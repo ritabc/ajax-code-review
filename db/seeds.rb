@@ -1,6 +1,7 @@
 class Seed
 
   def self.begin
+    Product.destroy_all
     seed = Seed.new
     seed.generate_products
   end

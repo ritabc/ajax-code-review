@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   root to: "products#index"
 
   get '/sign_up' => 'users#new'

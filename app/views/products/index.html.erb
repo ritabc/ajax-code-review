@@ -4,14 +4,19 @@
   <div class="section">
   <% @products.each do |product| %>
     <div class="col s4">
-      <h4><%= product.name %></h4>
-      <p><%= product.description %></p>
+      <div id="click-to-expand-product-<%= product.id %>">
+        <h4><%= link_to product.name, product_path(product.id), remote: true %><h4>
+      </div>
       <p><%= number_to_currency product.price %></p>
       <%= form_for @order_item, remote: true do |f| %>
         <%= f.hidden_field :product_id, value: product.id %>
         <%= f.number_field :quantity, placeholder: "Oops, breaks if you don't add input!", class: "quantity" %>
         <span class="waves-effect waves-light btn" id="add-item-<%= product.id %>-to-cart"><%= f.submit "Add to cart" %></span>
       <% end %>
+      <div id="product-<%= product.id %>-description" style="display:none;">
+        <p><%= product.description %></p>
+        <img src="<%= product.image %>" alt="A randomly generated image.">
+      </div>
     </div>
   <% end %>
   </div>

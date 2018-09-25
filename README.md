@@ -1,6 +1,10 @@
 # README
 
-E-commerce site. Uses `bcrypt` and `materialize`. There's a seed file. Set up your own admin.
+## Description
+Epicodus Independent Project 09/21/2017 - Assigned a project to refactor and add AJAX to.
+
+E-commerce site.
+Uses `bcrypt` and `materialize`.
 
 To set up:
 
@@ -13,10 +17,9 @@ To set up:
 1. Add admin links to navbar so admins can easily add, update and delete products.
 1. Add product update and delete functionality for admins.
 1. Add admin flash messages for adding, updating and deleting products.
+1. Add product validations.
+1. Ensure that users can't order a negative number of items.
 
-* Add product validations.
-
-* Ensure that users can't order a negative number of items.
 * Allow other than whole dollar amounts for admin product creation (for instance, 3.99).
 * Add Stripe so users can pay when finalizing orders.
 * Add password validations to ensure a user's password is sufficiently complex.

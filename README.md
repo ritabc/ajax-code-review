@@ -10,10 +10,10 @@ To set up:
 
 ## Additional Refactoring Goals:
 1. Add flash messages for signing up, signing in and signing out.
-* Add admin links to navbar so admins can easily add, update and delete products.
+1. Add admin links to navbar so admins can easily add, update and delete products.
+1. Add product update and delete functionality for admins.
+1. Add admin flash messages for adding, updating and deleting products.
 
-* Add product update and delete functionality for admins.
-* Add admin flash messages for adding, updating and deleting products.
 * Add product validations.
 
 * Ensure that users can't order a negative number of items.

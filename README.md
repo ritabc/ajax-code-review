@@ -9,11 +9,12 @@ To set up:
 * `rails db:setup`
 
 ## Additional Refactoring Goals:
-* Add flash messages for signing up, signing in and signing out.
+1. Add flash messages for signing up, signing in and signing out.
+1. Add admin links to navbar so admins can easily add, update and delete products.
+
 * Add product update and delete functionality for admins.
 * Add admin flash messages for adding, updating and deleting products.
 * Add product validations.
-* Add admin links to navbar so admins can easily add, update and delete products.
 
 * Ensure that users can't order a negative number of items.
 * Allow other than whole dollar amounts for admin product creation (for instance, 3.99).

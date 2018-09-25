@@ -5,7 +5,16 @@
   <% @products.each do |product| %>
     <div class="col s4">
       <div id="click-to-expand-product-<%= product.id %>">
-        <h4><%= link_to product.name, product_path(product.id), remote: true %><h4>
+        <h4><%= link_to product.name, product_path(product.id), remote: true %>
+          <% if admin %>
+            <%= link_to edit_product_path(product.id), class: 'waves-effect waves-light btn btn-floating' do %>
+              <i class="medium material-icons">edit</i>
+            <% end %>
+            <%= link_to product_path(product.id), :data => {:confirm => "You sure?", :method => "delete"}, class: 'waves-effect waves-light red btn-floating btn' do %>
+              <i class="medium material-icons">delete</i>
+            <% end %>
+          <% end %>
+        </h4>
       </div>
       <p><%= number_to_currency product.price %></p>
       <%= form_for @order_item, remote: true do |f| %>

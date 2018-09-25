@@ -6,6 +6,8 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
   </head>
   <nav>
     <div class="nav-wrapper">
@@ -16,7 +18,11 @@
           <% end %>
         </li>
         <li><%= link_to "See all products", products_path %></li>
-        <% if current_user %>
+        <% if admin %>
+          <li><%= link_to "New Product", new_product_path %></li>
+          <li><%= current_user.email %></li>
+          <li><%= link_to "Sign out", '/sign_out' %></li>
+        <% elsif current_user %>
           <li><%= current_user.email %></li>
           <li><%= link_to "Sign out", '/sign_out' %></li>
         <% else %>

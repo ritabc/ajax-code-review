@@ -8,7 +8,20 @@ To set up:
 * `bundle install`
 * `rails db:setup`
 
-## Feature Goals:
+## Additional Refactoring Goals:
+* Add flash messages for signing up, signing in and signing out.
+* Add product update and delete functionality for admins.
+* Add admin flash messages for adding, updating and deleting products.
+* Add product validations.
+* Add admin links to navbar so admins can easily add, update and delete products.
+
+* Ensure that users can't order a negative number of items.
+* Allow other than whole dollar amounts for admin product creation (for instance, 3.99).
+* Add Stripe so users can pay when finalizing orders.
+* Add password validations to ensure a user's password is sufficiently complex.
+* Fix the row height for products, which can quickly become uneven.
+* Add integration testing for AJAX functionality.
+* Add further AJAX functionality where it might be useful.
 
 ## AJAX Features
 * Users should be able to click on a product and show/hide the product detail using AJAX. The product detail should include an image, the description, and any other fields you choose to add.
